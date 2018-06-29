@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class dead_zone : MonoBehaviour {
-	public GameObject parent_player;
+	private GameObject parent_player;
 	// Use this for initialization
 	void Start () {
 		if((transform.parent.gameObject.GetComponent("player_battle_1") as player_battle_1) != null){
