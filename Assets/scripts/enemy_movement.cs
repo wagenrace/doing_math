@@ -28,7 +28,5 @@ public class enemy_movement : MonoBehaviour {
 		float second_elem = correct_answer - first_elem;
 		string new_question = first_elem.ToString() + "+" + second_elem.ToString();
 		GetComponent<TextMesh>().text = new_question;
-		Debug.Log(new_question);
-		Debug.Log(correct_answer);
 	}
 }

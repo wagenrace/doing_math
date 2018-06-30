@@ -60,4 +60,9 @@ public class enemy_director : MonoBehaviour {
 		s.GetComponent<enemy_movement>().set_add_whole_num(level);
 		num_enemies_created++;
 	}
+
+	public void getting_hit(string value){
+		float x = float.Parse(value);
+		enemy_ahead.GetComponent<enemy_movement>().hit(x);
+	}
 }
