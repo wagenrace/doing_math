@@ -13,8 +13,10 @@ public class firing_gun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("return") || Input.GetKeyDown("space")) {
+		inputFieldCo.ActivateInputField();
+		if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) {
 			enemy_director.getting_hit(inputFieldCo.text);
+			inputFieldCo.text = "";
 		}
 	}
 }
