@@ -23,9 +23,14 @@ public class enemy_director : MonoBehaviour {
 		detect_first_enemy();
 		long elapsedTicks = (long)System.DateTime.Now.Ticks - t_last_enemy_created;
 		System.TimeSpan elapsedSpan = new System.TimeSpan(elapsedTicks);
-		if(transform.childCount < max_num_enemies_simultaneously && elapsedSpan.TotalSeconds > delta_t_enemy_creation && num_enemies_created < max_num_enemies_total){
+		if(num_enemies_created < max_num_enemies_total){
+		if(transform.childCount < max_num_enemies_simultaneously && elapsedSpan.TotalSeconds > delta_t_enemy_creation){
 			create_new_enemy();
-			t_last_enemy_created = (long)System.DateTime.Now.Ticks;
+			
+		}
+		if(transform.childCount == 0){
+			create_new_enemy();
+		}
 		}
 	}
 
@@ -59,6 +64,7 @@ public class enemy_director : MonoBehaviour {
 		s.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.8f,Random.Range(0.2f, 0.8f),1f));
 		s.GetComponent<enemy_movement>().set_add_whole_num(level);
 		num_enemies_created++;
+		t_last_enemy_created = (long)System.DateTime.Now.Ticks;
 	}
 
 	public void getting_hit(string value){

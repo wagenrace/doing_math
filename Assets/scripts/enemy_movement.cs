@@ -6,6 +6,7 @@ public class enemy_movement : MonoBehaviour {
 	public float moveSpeed = 1f;
 	public Vector3 direction_vector = new Vector3(-1f, 0f, 0f);
 	public float correct_answer = 2f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,6 +20,8 @@ public class enemy_movement : MonoBehaviour {
 	public void hit(float answer){
 		if(answer == correct_answer){
 			Destroy(this.gameObject);
+		}else{
+
 		}
 	}
 
