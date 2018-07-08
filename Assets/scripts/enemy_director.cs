@@ -9,6 +9,7 @@ public class enemy_director : MonoBehaviour {
 	public float delta_t_enemy_creation = 5f;
 	public float level = 10f;
 	public GameObject target;
+	public player_battle_1 player;
 
 	private long t_last_enemy_created = 0;
 	private Transform enemy_ahead;
@@ -62,7 +63,7 @@ public class enemy_director : MonoBehaviour {
 		GameObject s = Instantiate(enemy_GO) as GameObject;
 		s.transform.SetParent(this.transform);
 		s.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.8f,Random.Range(0.2f, 0.8f),1f));
-		s.GetComponent<enemy_movement>().set_add_whole_num(level);
+		s.GetComponent<enemy_movement>().set_add_whole_num(level, player);
 		num_enemies_created++;
 		t_last_enemy_created = (long)System.DateTime.Now.Ticks;
 	}
