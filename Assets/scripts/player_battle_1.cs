@@ -10,11 +10,13 @@ public class player_battle_1 : MonoBehaviour {
 	public Text life_text;
 	public Text level_text;
 	public Text score_text;
+	private AudioManager audio_manager;
 	// Use this for initialization
 	void Start () {
 		show_lives();
 		show_score();
 		show_level();
+		audio_manager = FindObjectOfType<AudioManager>();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +26,7 @@ public class player_battle_1 : MonoBehaviour {
 
 	public void substract_life(int num = 1){
 		number_lifes -= num;
+		audio_manager.Play("incorrect_answer");
 		show_lives();
 	}
 

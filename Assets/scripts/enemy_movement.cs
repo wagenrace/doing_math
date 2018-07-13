@@ -24,8 +24,10 @@ public class enemy_movement : MonoBehaviour {
 			System.TimeSpan elapsedSpan = new System.TimeSpan(elapsedTicks);
 			Debug.Log("I lived for" + elapsedSpan.TotalSeconds.ToString());
 			player.update_score(100);
+			FindObjectOfType<AudioManager>().Play("correct_answer");
 			Destroy(this.gameObject);
 		}else{
+			FindObjectOfType<AudioManager>().Play("incorrect_answer");
 			player.update_score(-100);
 		}
 	}
