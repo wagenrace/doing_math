@@ -438,10 +438,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_num_enemies_simultaneously: 2
   max_num_enemies_total: 20
-  enemy_GO: {fileID: 1047950868252686, guid: ce2218fcf6b3c42b1a913d81a8249a0f, type: 2}
+  enemy_GO: {fileID: 1139960276684630, guid: 2b620bff45fe44833b87f29489725f69, type: 2}
   delta_t_enemy_creation: 5
   level: 10
   target: {fileID: 169792890}
+  player: {fileID: 1616419727}
 --- !u!1 &432800850
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +743,66 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1100691453}
+--- !u!1 &1272408763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1272408765}
+  - component: {fileID: 1272408764}
+  m_Layer: 0
+  m_Name: Audio_manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1272408764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272408763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4851f0ec1dc7a4f5d8930963bd4e3dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: correct_answer
+    clip: {fileID: 8300000, guid: 57d10d482179d47eea592aac5265c102, type: 3}
+    volume: 1
+    volumeVariance: 0.3
+    pitch: 1
+    pitchVariance: 0.3
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: incorrect_answer
+    clip: {fileID: 8300000, guid: 035127568be1647f6865d0edacfd95f0, type: 3}
+    volume: 1
+    volumeVariance: 0.3
+    pitch: 1
+    pitchVariance: 0.3
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+--- !u!4 &1272408765
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272408763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512882699
 GameObject:
   m_ObjectHideFlags: 0

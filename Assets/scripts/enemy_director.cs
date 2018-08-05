@@ -10,6 +10,7 @@ public class enemy_director : MonoBehaviour {
 	public float level = 10f;
 	public GameObject target;
 	public player_battle_1 player;
+	public GameObject input_field;
 
 	private long t_last_enemy_created = 0;
 	private Transform enemy_ahead;
@@ -25,13 +26,19 @@ public class enemy_director : MonoBehaviour {
 		long elapsedTicks = (long)System.DateTime.Now.Ticks - t_last_enemy_created;
 		System.TimeSpan elapsedSpan = new System.TimeSpan(elapsedTicks);
 		if(num_enemies_created < max_num_enemies_total){
-		if(transform.childCount < max_num_enemies_simultaneously && elapsedSpan.TotalSeconds > delta_t_enemy_creation){
-			create_new_enemy();
-			
+			if(transform.childCount < max_num_enemies_simultaneously && elapsedSpan.TotalSeconds > delta_t_enemy_creation){
+				create_new_enemy();
+				
+			}
+			if(transform.childCount == 0){
+				create_new_enemy();
+			}
 		}
-		if(transform.childCount == 0){
-			create_new_enemy();
-		}
+		try{
+			input_field.SetActive(true);
+			input_field.transform.position = new Vector3(enemy_ahead.transform.position.x, enemy_ahead.transform.position.y);
+		}catch{
+			input_field.SetActive(false);
 		}
 	}
 
