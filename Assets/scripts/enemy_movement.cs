@@ -8,6 +8,8 @@ public class enemy_movement : MonoBehaviour {
 	public float correct_answer = 2f;
 	public player_battle_1 player;
 	private long time_created;
+	private string current_answer = "";
+	private string question = "";
 	// Use this for initialization
 	void Start () {
 		time_created = (long)System.DateTime.Now.Ticks;
@@ -30,14 +32,19 @@ public class enemy_movement : MonoBehaviour {
 			FindObjectOfType<AudioManager>().Play("incorrect_answer");
 			player.update_score(-100);
 		}
+		update_answer("");
 	}
 
+	public void update_answer(string new_answer){
+		current_answer = new_answer;
+		GetComponent<TextMesh>().text = question + current_answer;
+	}
 	public void set_add_whole_num(float level, player_battle_1 _player){
 		player = _player;
 		correct_answer = Mathf.Round(Random.Range(2, level));
 		float first_elem = Mathf.Round(Random.Range(1, correct_answer));
 		float second_elem = correct_answer - first_elem;
-		string new_question = first_elem.ToString() + "+" + second_elem.ToString() + "=";
-		GetComponent<TextMesh>().text = new_question;
+		question = first_elem.ToString() + "+" + second_elem.ToString() + "=";
+		GetComponent<TextMesh>().text = question;
 	}
 }

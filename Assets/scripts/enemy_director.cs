@@ -10,8 +10,9 @@ public class enemy_director : MonoBehaviour {
 	public float level = 10f;
 	public GameObject target;
 	public player_battle_1 player;
-	public GameObject input_field;
 
+	private string current_answer_s = "";
+	private float current_answer_f = 0f;
 	private long t_last_enemy_created = 0;
 	private Transform enemy_ahead;
 	private int num_enemies_created = 0;
@@ -34,11 +35,30 @@ public class enemy_director : MonoBehaviour {
 				create_new_enemy();
 			}
 		}
-		try{
-			input_field.SetActive(true);
-			input_field.transform.position = new Vector3(enemy_ahead.transform.position.x, enemy_ahead.transform.position.y);
-		}catch{
-			input_field.SetActive(false);
+		/*
+		Taking the answer of 
+		 */
+        if (Input.anyKeyDown ){
+			if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) {
+				Debug.Log("FIRE");
+				getting_hit(current_answer_s);
+				current_answer_s= "";
+				current_answer_f = 0f;
+			}else if (Input.GetKeyDown("backspace")) {
+				Debug.Log ("Backspace!");
+				if(current_answer_s.Length >0){
+					current_answer_s = current_answer_s.Substring(0, current_answer_s.Length - 1);
+					if(!float.TryParse(current_answer_s + Input.inputString, out current_answer_f)){
+						current_answer_f = 0;
+					}
+				}
+				update_answer();
+				
+			}else if(float.TryParse(current_answer_s + Input.inputString, out current_answer_f)){
+				current_answer_s = current_answer_s + Input.inputString;
+				Debug.Log("Current answer: " + current_answer_s);
+				update_answer();
+			}
 		}
 	}
 
@@ -75,8 +95,14 @@ public class enemy_director : MonoBehaviour {
 		t_last_enemy_created = (long)System.DateTime.Now.Ticks;
 	}
 
-	public void getting_hit(string value){
-		float x = float.Parse(value);
-		enemy_ahead.GetComponent<enemy_movement>().hit(x);
+	private void getting_hit(string value){
+		float x = 0f;
+		if(float.TryParse(value, out x)){
+			enemy_ahead.GetComponent<enemy_movement>().hit(x);
+		}
+	}
+
+	private void update_answer(){
+		enemy_ahead.GetComponent<enemy_movement>().update_answer(current_answer_s);
 	}
 }

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 50456636738399344}
   - component: {fileID: 114838959812965844}
   m_Layer: 20
-  m_Name: Enemy 1
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ TextMesh:
   m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 4
-  m_Alignment: 1
+  m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 400
   m_FontStyle: 0
