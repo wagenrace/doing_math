@@ -64,21 +64,21 @@ public class enemy_director : MonoBehaviour {
 
 	void detect_first_enemy(){
 		float? min_x = null;
-		for(int i = 0; i < transform.GetChildCount(); i++){
+		for(int i = 0; i < transform.childCount; i++){
 			Transform Go = transform.GetChild(i);
 			if(min_x == null){
 				min_x = Go.transform.position.x;
-				enemy_ahead = Go.transform;
+				update_enemy_ahead(Go.transform);
 			}else{
 				if(min_x > Go.transform.position.x){
 					min_x = Go.transform.position.x;
-					enemy_ahead = Go.transform;
+					update_enemy_ahead(Go.transform);
 				}
 			}
 		}
 		
 		//target.position = Go.transform.position;
-		if(transform.GetChildCount() == 0){
+		if(transform.childCount == 0){
 			target.GetComponent<SpriteRenderer>().enabled = false;
 		}else{
 			target.GetComponent<SpriteRenderer>().enabled = true;
@@ -86,6 +86,11 @@ public class enemy_director : MonoBehaviour {
 		}
 	}
 
+	private void update_enemy_ahead(Transform i){
+		enemy_ahead = i;
+		player.set_first_enemy(i);
+	}
+	
 	void create_new_enemy(){
 		GameObject s = Instantiate(enemy_GO) as GameObject;
 		s.transform.SetParent(this.transform);
@@ -104,5 +109,10 @@ public class enemy_director : MonoBehaviour {
 
 	private void update_answer(){
 		enemy_ahead.GetComponent<enemy_movement>().update_answer(current_answer_s);
+	}
+
+	public void dead_zone_trigged(){
+		current_answer_s = "";
+		current_answer_f = 0f;
 	}
 }

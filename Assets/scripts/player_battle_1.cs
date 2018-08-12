@@ -10,7 +10,12 @@ public class player_battle_1 : MonoBehaviour {
 	public Text life_text;
 	public Text level_text;
 	public Text score_text;
+	public GameObject player_sprite;
+	public float player_sprite_speed = 1f;
+
 	private AudioManager audio_manager;
+	private Transform first_enemy;
+	private Vector3 target_pos;
 	// Use this for initialization
 	void Start () {
 		show_lives();
@@ -21,9 +26,16 @@ public class player_battle_1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-				
+		float step = player_sprite_speed * Time.deltaTime;
+
+        // Move our position a step closer to the target.
+        player_sprite.transform.position = Vector3.MoveTowards(player_sprite.transform.position, target_pos, step);
 	}
 
+	public void set_first_enemy(Transform i){
+		first_enemy = i;
+		target_pos = new Vector3(player_sprite.transform.position.x, first_enemy.transform.position.y, player_sprite.transform.position.z);
+	}
 	public void substract_life(int num = 1){
 		number_lifes -= num;
 		audio_manager.Play("incorrect_answer");

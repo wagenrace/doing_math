@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 102701523551300668}
   - component: {fileID: 114543132289412686}
   - component: {fileID: 61598993090065146}
-  - component: {fileID: 50456636738399344}
   - component: {fileID: 114838959812965844}
+  - component: {fileID: 50560665251497742}
   m_Layer: 20
   m_Name: Enemy
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: -449487717
   m_SortingLayer: 2
   m_SortingOrder: 0
---- !u!50 &50456636738399344
+--- !u!50 &50560665251497742
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!61 &61598993090065146
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -112,7 +112,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -123,7 +123,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!102 &102701523551300668
 TextMesh:
@@ -136,7 +136,7 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 0.03
   m_LineSpacing: 1
-  m_Anchor: 4
+  m_Anchor: 3
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 400
