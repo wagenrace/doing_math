@@ -745,6 +745,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: music
+    clip: {fileID: 8300000, guid: 31ef35b1aa34f4cca9b22eaa22f8c712, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
 --- !u!4 &1272408765
 Transform:
   m_ObjectHideFlags: 0
@@ -841,7 +850,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1616419728}
   - component: {fileID: 1616419727}
-  - component: {fileID: 1616419729}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -884,17 +892,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1616419729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1616419726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668572f844f6841ac9b2262a1cb964b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1811943814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1252,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2116487890}
   - component: {fileID: 2116487891}
-  - component: {fileID: 2116487892}
   m_Layer: 0
   m_Name: Player_spite
   m_TagString: Untagged
@@ -1321,17 +1317,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &2116487892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2116487889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 448167d9a47354bd18f220e2911809b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2119092994
 GameObject:
   m_ObjectHideFlags: 0
