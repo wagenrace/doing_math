@@ -43,7 +43,6 @@ public class player_battle_1 : MonoBehaviour {
 	}
 
 	private void show_lives(){
-		Debug.Log("number of lifes is " + number_lifes);
 		life_text.text = "Lives: " + number_lifes.ToString();
 	}
 

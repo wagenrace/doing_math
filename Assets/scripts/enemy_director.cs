@@ -7,18 +7,26 @@ public class enemy_director : MonoBehaviour {
 	public int max_num_enemies_total = 20;
 	public GameObject enemy_GO;
 	public float delta_t_enemy_creation = 5f;
-	public float level = 10f;
+    public int level = 1;
 	public GameObject target;
 	public player_battle_1 player;
+    public level_parameters[] levels;
 
-	private string current_answer_s = "";
+    private float addition_level = 9f;
+    private string current_answer_s = "";
 	private float current_answer_f = 0f;
 	private long t_last_enemy_created = 0;
 	private Transform enemy_ahead;
 	private int num_enemies_created = 0;
 	// Use this for initialization
-	void Start () {
+	void Awake() {
 
+        int level_num = 1;
+        foreach(level_parameters l in levels)
+        {
+            l.level = level_num;
+            level_num++;
+        }
 	}
 	
 	// Update is called once per frame
@@ -40,12 +48,10 @@ public class enemy_director : MonoBehaviour {
 		 */
         if (Input.anyKeyDown ){
 			if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) {
-				Debug.Log("FIRE");
 				getting_hit(current_answer_s);
 				current_answer_s= "";
 				current_answer_f = 0f;
 			}else if (Input.GetKeyDown("backspace")) {
-				Debug.Log ("Backspace!");
 				if(current_answer_s.Length >0){
 					current_answer_s = current_answer_s.Substring(0, current_answer_s.Length - 1);
 					if(!float.TryParse(current_answer_s + Input.inputString, out current_answer_f)){
@@ -56,7 +62,6 @@ public class enemy_director : MonoBehaviour {
 				
 			}else if(float.TryParse(current_answer_s + Input.inputString, out current_answer_f)){
 				current_answer_s = current_answer_s + Input.inputString;
-				Debug.Log("Current answer: " + current_answer_s);
 				update_answer();
 			}
 		}
@@ -95,7 +100,7 @@ public class enemy_director : MonoBehaviour {
 		GameObject s = Instantiate(enemy_GO) as GameObject;
 		s.transform.SetParent(this.transform);
 		s.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.8f,Random.Range(0.2f, 0.8f),1f));
-		s.GetComponent<enemy_movement>().set_add_whole_num(level, player);
+		s.GetComponent<enemy_movement>().set_add_whole_num(addition_level, player);
 		num_enemies_created++;
 		t_last_enemy_created = (long)System.DateTime.Now.Ticks;
 	}
