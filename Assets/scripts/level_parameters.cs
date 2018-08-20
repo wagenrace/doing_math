@@ -16,5 +16,4 @@ public class level_parameters {
 
     public float min_answer_sub = 0f;
 
-
 }

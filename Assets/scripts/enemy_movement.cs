@@ -7,6 +7,7 @@ public class enemy_movement : MonoBehaviour {
 	public Vector3 direction_vector = new Vector3(-1f, 0f, 0f);
 	public float correct_answer = 2f;
 	public player_battle_1 player;
+	public enemy_director the_director;
 	private long time_created;
 	private string current_answer = "";
 	private string question = "";
@@ -25,12 +26,12 @@ public class enemy_movement : MonoBehaviour {
 			long elapsedTicks = (long)System.DateTime.Now.Ticks - time_created;
 			System.TimeSpan elapsedSpan = new System.TimeSpan(elapsedTicks);
 			Debug.Log("I lived for" + elapsedSpan.TotalSeconds.ToString());
-			player.update_score(100);
+			the_director.update_score(100);
 			FindObjectOfType<AudioManager>().Play("correct_answer");
 			Destroy(this.gameObject);
 		}else{
 			FindObjectOfType<AudioManager>().Play("incorrect_answer");
-			player.update_score(-100);
+			the_director.update_score(-100);
 		}
 		update_answer("");
 	}
@@ -39,8 +40,7 @@ public class enemy_movement : MonoBehaviour {
 		current_answer = new_answer;
 		GetComponent<TextMesh>().text = question + current_answer;
 	}
-	public void set_add_whole_num(float level, player_battle_1 _player){
-		player = _player;
+	public void set_add_whole_num(float level){
 		correct_answer = Mathf.Round(Random.Range(2, level));
 		float first_elem = Mathf.Round(Random.Range(1, correct_answer));
 		float second_elem = correct_answer - first_elem;
