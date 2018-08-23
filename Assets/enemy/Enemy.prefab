@@ -160,7 +160,9 @@ MonoBehaviour:
   moveSpeed: 1
   direction_vector: {x: -1, y: 0, z: 0}
   correct_answer: 2
-  player: {fileID: 0}
+  the_director: {fileID: 0}
+  current_answer: 
+  question: 
 --- !u!114 &114838959812965844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,3 +176,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerName: enemy
   order: 0
+  rend: {fileID: 23135166450821104}

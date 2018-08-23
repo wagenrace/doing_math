@@ -146,7 +146,7 @@ RectTransform:
   - {fileID: 2119092995}
   - {fileID: 1512882700}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 56799230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb25098895474bd4857e14b9cc9e17a, type: 3}
+  m_Script: {fileID: 11500000, guid: 52faf367bd4221a4aac53a6bb7575bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   life_text: {fileID: 2119092996}
@@ -364,7 +364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393c6302112a2467fb64dc6b2bfd9209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_director: {fileID: 299692331}
+  enemy_director: {fileID: 0}
+  the_orchastetor: {fileID: 0}
 --- !u!1 &299692329
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,11 +389,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 299692329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.250118, y: 0.940143, z: -0.27366257}
+  m_LocalPosition: {x: -0.4334339, y: 0.124658704, z: -0.04296875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 432800851}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &299692331
 MonoBehaviour:
@@ -402,31 +403,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 299692329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb5a096fac8f84760b3f0e979b2c12ee, type: 3}
+  m_Script: {fileID: 11500000, guid: cd7a2574eeeb8d844b82925446aedbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_num_enemies_simultaneously: 3
-  max_num_enemies_total: 20
-  enemy_GO: {fileID: 1139960276684630, guid: 2b620bff45fe44833b87f29489725f69, type: 2}
-  delta_t_enemy_creation: 5
-  level: 1
-  target: {fileID: 169792890}
-  player: {fileID: 1616419727}
-  levels:
-  - level: 0
-    do_addition: 1
-    max_answer_add: 10
-    min_answer_add: 0
-    do_substaction: 0
-    max_answer_sub: 10
-    min_answer_sub: 0
-  - level: 0
-    do_addition: 1
-    max_answer_add: 10
-    min_answer_add: 0
-    do_substaction: 0
-    max_answer_sub: 10
-    min_answer_sub: 0
 --- !u!1 &432800850
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +432,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 169792891}
-  - {fileID: 299692330}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -608,6 +586,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1565932620}
+  - component: {fileID: 1565932621}
   - component: {fileID: 1565932619}
   m_Layer: 0
   m_Name: the_orchastetor
@@ -624,13 +603,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1565932618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a534615339704c5397c3093d7ae4487, type: 3}
+  m_Script: {fileID: 11500000, guid: b68fb731f02d9d041835547be9cf813e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num_lives: 5
-  sorce: 3
-  level: 4
-  UI_orchastetor: {fileID: 56799235}
+  parent_director: {fileID: 1565932621}
 --- !u!4 &1565932620
 Transform:
   m_ObjectHideFlags: 0
@@ -642,8 +618,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565932621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565932618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9859b310c71df2e42a3b14713691d1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  level: 1
+  score: 0
+  correct_answer_added_score: 100
+  ui_director: {fileID: 0}
 --- !u!1 &1616419726
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,14 +663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2c3f5fd4c164eccaa08cf17c34d1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number_lifes: 3
-  score: 0
-  level: 1
-  life_text: {fileID: 2119092996}
-  level_text: {fileID: 1512882701}
-  score_text: {fileID: 1882860125}
   player_sprite: {fileID: 2116487889}
   player_sprite_speed: 5
+  audio_manager: {fileID: 0}
+  first_enemy: {fileID: 0}
+  target_pos: {x: 0, y: 0, z: 0}
 --- !u!4 &1616419728
 Transform:
   m_ObjectHideFlags: 0
