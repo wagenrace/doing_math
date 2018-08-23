@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class game_director : MonoBehaviour {
+public class gameDirector : MonoBehaviour {
     [Header("Game Parameters")]
     public int lives = 3;
     public int level = 1;

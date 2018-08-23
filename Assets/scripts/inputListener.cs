@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class inputListener : MonoBehaviour {
-    public game_director parent_director;
+    public gameDirector parent_director;
 
     private string current_answer_s = "";
     private float current_answer_f = 0f;
@@ -21,8 +21,7 @@ public class inputListener : MonoBehaviour {
                 if (current_answer_s != "")
                 {
                     parent_director.send_answer(current_answer_s);
-                    current_answer_s = "";
-                    current_answer_f = 0f;
+                    set_current_answer_zero();
                 }
             }
             else if (Input.GetKeyDown("backspace"))

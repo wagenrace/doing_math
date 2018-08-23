@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 8
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -39,7 +39,6 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
-  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -55,10 +54,11 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -266,7 +266,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -364,8 +363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393c6302112a2467fb64dc6b2bfd9209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_director: {fileID: 0}
-  the_orchastetor: {fileID: 0}
 --- !u!1 &299692329
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,38 +456,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1272408763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4851f0ec1dc7a4f5d8930963bd4e3dd5, type: 3}
+  m_Script: {fileID: 11500000, guid: de9e07e235e97054ba3ea38c7359fd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
-  sounds:
-  - name: correct_answer
-    clip: {fileID: 8300000, guid: 57d10d482179d47eea592aac5265c102, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: incorrect_answer
-    clip: {fileID: 8300000, guid: 035127568be1647f6865d0edacfd95f0, type: 3}
-    volume: 1
-    volumeVariance: 0.3
-    pitch: 1
-    pitchVariance: 0.3
-    loop: 0
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: music
-    clip: {fileID: 8300000, guid: 31ef35b1aa34f4cca9b22eaa22f8c712, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 1
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
+  sounds: []
 --- !u!4 &1272408765
 Transform:
   m_ObjectHideFlags: 0
@@ -635,7 +605,9 @@ MonoBehaviour:
   level: 1
   score: 0
   correct_answer_added_score: 100
-  ui_director: {fileID: 0}
+  ui_director: {fileID: 56799235}
+  enemy_director: {fileID: 299692331}
+  input_listener: {fileID: 1565932619}
 --- !u!1 &1616419726
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,11 +635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2c3f5fd4c164eccaa08cf17c34d1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_sprite: {fileID: 2116487889}
-  player_sprite_speed: 5
-  audio_manager: {fileID: 0}
-  first_enemy: {fileID: 0}
-  target_pos: {x: 0, y: 0, z: 0}
 --- !u!4 &1616419728
 Transform:
   m_ObjectHideFlags: 0
@@ -915,7 +882,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -1002,7 +968,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
