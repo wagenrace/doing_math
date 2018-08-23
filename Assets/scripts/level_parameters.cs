@@ -3,6 +3,7 @@
 [System.Serializable]
 public class level_parameters {
     public int level;
+    public int next_level_score = -1;
 
     [Header("addition")]
     public bool do_addition = true;
@@ -15,6 +16,5 @@ public class level_parameters {
     public float max_answer_sub = 10f;
 
     public float min_answer_sub = 0f;
-
 
 }
