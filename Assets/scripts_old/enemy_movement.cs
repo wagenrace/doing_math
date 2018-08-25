@@ -39,6 +39,7 @@ public class enemy_movement : MonoBehaviour {
 		current_answer = new_answer;
 		GetComponent<TextMesh>().text = question + current_answer;
 	}
+	
 	public void set_add_whole_num(float level){
 		correct_answer = Mathf.Round(Random.Range(2, level));
 		float first_elem = Mathf.Round(Random.Range(1, correct_answer));
