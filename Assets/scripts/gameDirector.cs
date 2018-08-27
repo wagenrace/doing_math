@@ -27,12 +27,12 @@ public class gameDirector : MonoBehaviour {
 
     public void send_answer(string answer)
     {
-        Debug.Log("Firing " + answer.ToString());
+        enemy_director.send_answer(answer);
     }
 
     public void update_answer(string answer)
     {
-        Debug.Log("answer is" + answer.ToString());
+        enemy_director.update_answer(answer);
     }
 
     public void change_lives(int dif = -1)
