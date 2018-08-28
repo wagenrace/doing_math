@@ -9,6 +9,7 @@ public class gameDirector : MonoBehaviour {
     public int score = 0;
 
     public int correct_answer_added_score = 100;
+    public int incorrect_answer_added_score = -500;
     [Header("Sub Director")]
     public UIDirector ui_director;
     public enemyDirector enemy_director;
@@ -50,16 +51,29 @@ public class gameDirector : MonoBehaviour {
     public void change_score(int dif = 100)
     {
         score += dif;
+        if(score < 0){
+            score = 0;
+        }
         ui_director.set_score(score);
     }
 
-    public void send_correct_answer()
+    public void correct_answer_sended()
     {
+        update_answer(string.Empty);
+        input_listener.set_current_answer_zero();
         change_score(correct_answer_added_score);
     }
 
-    public void send_incorrect_answer()
+    public void incorrect_answer_sended()
     {
+        update_answer(string.Empty);
+        input_listener.set_current_answer_zero();
+        change_score(incorrect_answer_added_score);
+    }
+
+    public void dead_zone_hit(){
+        update_answer(string.Empty);
+        input_listener.set_current_answer_zero();
         change_lives(-1);
     }
 }

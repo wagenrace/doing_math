@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class enemyDirector : MonoBehaviour {
 	public GameObject enemy_object;
+	public gameDirector the_director;
 	public int max_num_enemies_simultaneously = 2;
 	public float delta_t_enemy_creation = 5f; 
 
@@ -68,11 +69,11 @@ public class enemyDirector : MonoBehaviour {
 	}
 
 	public void correct_answer_sended(){
-		Debug.Log("That was Correct");
+		the_director.correct_answer_sended();
 	}
 
 	public void incorrect_answer_sended(){
-		Debug.Log("That was WRONG!!!");
+		the_director.incorrect_answer_sended();
 	}
 
 	public void send_answer(string answer)
@@ -82,7 +83,6 @@ public class enemyDirector : MonoBehaviour {
 
     public void update_answer(string answer)
     {	
-		Debug.Log("Enemy direct sends" + answer);
         enemy_ahead.update_answer(answer);
     }
 }
