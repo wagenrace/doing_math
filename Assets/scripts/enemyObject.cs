@@ -1,20 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class enemyObject : MonoBehaviour {
     private enemyDirector the_director;
-    private string correct_answer = "2";
-    private string question = "1+1=";
+    private string correct_answer;
+    private string question;
     private float moveSpeed = 1f;
     private Vector3 direction_vector = new Vector3(-1f, 0f, 0f);
 
-    void awake(){
-        Debug.Log("I am ALIVE!!");
-        set_text(question); //TODO remove this
-    }
-
-    void update(){
+    void Update(){
 		transform.Translate(direction_vector * moveSpeed * Time.deltaTime);
     }
 
@@ -22,8 +19,13 @@ public class enemyObject : MonoBehaviour {
         the_director = new_director;
     }
 
-    void set_text(string question){
-        GetComponent<TextMesh>().text = question;
+    void set_question(string _question){
+        question = _question;
+        set_text(question);
+    }
+
+    void set_text(string new_text){
+        GetComponent<TextMesh>().text = new_text;
     }
 
     void set_correct_answer(string answer){
@@ -43,4 +45,11 @@ public class enemyObject : MonoBehaviour {
 			the_director.incorrect_answer_sended();
 		}
 	}
+
+    public void initilize_question(enemyDirector new_director){
+        set_question("1+1=");
+        set_correct_answer("2");
+        set_director(new_director);
+        //throw new NotImplementedException("The requested feature is not implemented.");
+    }
 }

@@ -31,13 +31,15 @@ public class enemyDirector : MonoBehaviour {
 
 		//find out what is a ahead
 		detect_first_enemy();
+
 	}
 
 	void create_new_enemy(){
 		GameObject s = Instantiate(enemy_object) as GameObject;
 		s.transform.SetParent(this.transform);
 		s.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.8f,Random.Range(0.2f, 0.8f),1f));
-        s.GetComponent<enemyObject>().set_director(this);
+        s.GetComponent<enemyObject>().initilize_question(this);
+		
         //s.GetComponent<enemyObject>().create_question();
 
 		//Set time of last enemy created to current time
