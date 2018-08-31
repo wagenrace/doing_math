@@ -15,7 +15,7 @@ public class enemyObject : MonoBehaviour {
 		transform.Translate(direction_vector * moveSpeed * Time.deltaTime);
     }
 
-    public void set_director(enemyDirector new_director){
+    void set_director(enemyDirector new_director){
         the_director = new_director;
     }
 
@@ -46,10 +46,10 @@ public class enemyObject : MonoBehaviour {
 		}
 	}
 
-    public void initilize_question(enemyDirector new_director){
-        set_question("1+1=");
-        set_correct_answer("2");
-        set_director(new_director);
+    public void initilize_question(enemyDirector _director, string _question, string _answer){
+        set_question(_question);
+        set_correct_answer(_answer);
+        set_director(_director);
         //throw new NotImplementedException("The requested feature is not implemented.");
     }
 }

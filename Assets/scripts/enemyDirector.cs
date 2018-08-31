@@ -5,9 +5,11 @@ using UnityEngine;
 public class enemyDirector : MonoBehaviour {
 	public GameObject enemy_object;
 	public gameDirector the_director;
+    public enemyLevelDirector level_director;
 	public int max_num_enemies_simultaneously = 2;
 	public float delta_t_enemy_creation = 5f; 
 
+    private int current_level;
 	private string correct_answer;
 	private enemyObject enemy_ahead;
 	private long t_last_enemy_created = 0;
@@ -36,13 +38,16 @@ public class enemyDirector : MonoBehaviour {
 	}
 
 	void create_new_enemy(){
+        
 		GameObject s = Instantiate(enemy_object) as GameObject;
 		s.transform.SetParent(this.transform);
 		s.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.8f,Random.Range(0.2f, 0.8f),1f));
-        s.GetComponent<enemyObject>().initilize_question(this);
+        
+        ArrayList arr;
+        arr = level_director.create_enemy(current_level);
+        Debug.Log(arr);
+        s.GetComponent<enemyObject>().initilize_question(this, arr[0].ToString(), arr[1].ToString());
 		
-        //s.GetComponent<enemyObject>().create_question();
-
 		//Set time of last enemy created to current time
 		t_last_enemy_created = (long)System.DateTime.Now.Ticks;
 		detect_first_enemy();
