@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class levelParameters {
-    public int level = 1;
-    public int next_level_score = 1000;
-
+public class levelParametersEnemy {
     [Header("addition")]
     public float addition_prop_weight = 1f;
     public float max_answer_add = 10f;

@@ -43,9 +43,7 @@ public class enemyDirector : MonoBehaviour {
 		s.transform.SetParent(this.transform);
 		s.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.8f,Random.Range(0.2f, 0.8f),1f));
         
-        ArrayList arr;
-        arr = level_director.create_enemy(current_level);
-        Debug.Log(arr);
+        ArrayList arr = level_director.create_enemy(current_level);
         s.GetComponent<enemyObject>().initilize_question(this, arr[0].ToString(), arr[1].ToString());
 		
 		//Set time of last enemy created to current time

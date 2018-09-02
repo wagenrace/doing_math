@@ -423,19 +423,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - level: 1
-    next_level_score: 1000
-    addition_prop_weight: 1
-    max_answer_add: 15
-    min_answer_add: 10
+  - addition_prop_weight: 9
+    max_answer_add: 1
+    min_answer_add: 5
     num_decimals_add: 0
-    substraction_prop_weight: 0
-    max_answer_sub: 0
-    min_answer_sub: 0
+    substraction_prop_weight: 1
+    max_answer_sub: 10
+    min_answer_sub: 5
     num_decimals_sub: 0
-  - level: 0
-    next_level_score: 0
-    addition_prop_weight: 0
+  - addition_prop_weight: 0
     max_answer_add: 0
     min_answer_add: 0
     num_decimals_add: 0
