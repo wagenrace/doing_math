@@ -33,7 +33,6 @@ public class enemyObject : MonoBehaviour {
     }
 
     public void update_answer(string current_input){
-        Debug.Log("Enemy objects updates answer to" + current_input);
         set_text(question + current_input);
     }
 

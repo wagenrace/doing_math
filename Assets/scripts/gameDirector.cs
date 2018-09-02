@@ -14,16 +14,14 @@ public class gameDirector : MonoBehaviour {
     public UIDirector ui_director;
     public enemyDirector enemy_director;
     public inputListener input_listener;
-    // Use this for initialization
+    public gameLevelDirector level_director;
+
+    private levelParametersGame current_level;
     void Start () {
         ui_director.set_lives(lives);
         ui_director.set_level(level);
         ui_director.set_score(score);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        current_level = level_director.check_current_level(score);
 	}
 
     public void send_answer(string answer)
@@ -55,6 +53,7 @@ public class gameDirector : MonoBehaviour {
             score = 0;
         }
         ui_director.set_score(score);
+        check_current_level();
     }
 
     public void correct_answer_sended()
@@ -75,5 +74,16 @@ public class gameDirector : MonoBehaviour {
         update_answer(string.Empty);
         input_listener.set_current_answer_zero();
         change_lives(-1);
+    }
+
+    void check_current_level()
+    {
+        levelParametersGame new_level = level_director.check_current_level(score);
+        if(new_level != current_level)
+        {
+            current_level = new_level;
+            Debug.Log("Level has changed");
+        }
+
     }
 }

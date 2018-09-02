@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class enemyDirector : MonoBehaviour {
-	public GameObject enemy_object;
+    public int max_num_enemies_simultaneously = 2;
+	public float delta_t_enemy_creation = 5f; 	
+
+    public GameObject enemy_object;
 	public gameDirector the_director;
     public enemyLevelDirector level_director;
-	public int max_num_enemies_simultaneously = 2;
-	public float delta_t_enemy_creation = 5f; 
 
     private int current_level;
 	private string correct_answer;

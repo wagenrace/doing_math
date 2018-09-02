@@ -423,13 +423,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - addition_prop_weight: 9
+  - addition_prop_weight: 0
     max_answer_add: 1
     min_answer_add: 5
     num_decimals_add: 0
     substraction_prop_weight: 1
     max_answer_sub: 10
-    min_answer_sub: 5
+    min_answer_sub: 7
     num_decimals_sub: 0
   - addition_prop_weight: 0
     max_answer_add: 0
@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 1565932620}
   - component: {fileID: 1565932621}
   - component: {fileID: 1565932619}
+  - component: {fileID: 1565932622}
   m_Layer: 0
   m_Name: the_orchastetor
   m_TagString: Untagged
@@ -645,6 +646,18 @@ MonoBehaviour:
   ui_director: {fileID: 56799235}
   enemy_director: {fileID: 299692331}
   input_listener: {fileID: 1565932619}
+--- !u!114 &1565932622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565932618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7aaae4c178a57499d70abcaa423293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels: []
 --- !u!1 &1616419726
 GameObject:
   m_ObjectHideFlags: 0
