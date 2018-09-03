@@ -39,7 +39,7 @@ public class enemyObject : MonoBehaviour {
     public void send_answer(string answer){
 		if(answer == correct_answer){
             the_director.correct_answer_sended();
-			Destroy(this.gameObject);
+			self_destruct();
 		}else{
 			the_director.incorrect_answer_sended();
 		}
@@ -50,5 +50,10 @@ public class enemyObject : MonoBehaviour {
         set_correct_answer(_answer);
         set_director(_director);
         //throw new NotImplementedException("The requested feature is not implemented.");
+    }
+
+    public void self_destruct()
+    {
+        Destroy(this.gameObject);
     }
 }

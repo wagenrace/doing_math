@@ -8,6 +8,10 @@ public class gameLevelDirector : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		num_levels = levels.Length;
+        for(int l = 0;l<num_levels; l++)
+        {
+            levels[l].set_level(l);
+        }
 	}
 	
 	// Update is called once per frame

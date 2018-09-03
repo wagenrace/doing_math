@@ -405,12 +405,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7a2574eeeb8d844b82925446aedbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_num_enemies_simultaneously: 2
+  delta_t_enemy_creation: 5
   enemy_object: {fileID: 1112263802622646, guid: 2b620bff45fe44833b87f29489725f69,
     type: 2}
   the_director: {fileID: 1565932621}
   level_director: {fileID: 299692332}
-  max_num_enemies_simultaneously: 2
-  delta_t_enemy_creation: 5
 --- !u!114 &299692332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,11 +423,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - addition_prop_weight: 0
+  - addition_prop_weight: 1
     max_answer_add: 1
     min_answer_add: 5
     num_decimals_add: 0
-    substraction_prop_weight: 1
+    substraction_prop_weight: 0
     max_answer_sub: 10
     min_answer_sub: 7
     num_decimals_sub: 0
@@ -435,8 +435,8 @@ MonoBehaviour:
     max_answer_add: 0
     min_answer_add: 0
     num_decimals_add: 0
-    substraction_prop_weight: 0
-    max_answer_sub: 0
+    substraction_prop_weight: 1
+    max_answer_sub: 10
     min_answer_sub: 0
     num_decimals_sub: 0
 --- !u!1 &432800850
@@ -646,6 +646,7 @@ MonoBehaviour:
   ui_director: {fileID: 56799235}
   enemy_director: {fileID: 299692331}
   input_listener: {fileID: 1565932619}
+  level_director: {fileID: 1565932622}
 --- !u!114 &1565932622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,7 +658,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7aaae4c178a57499d70abcaa423293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels: []
+  levels:
+  - score_for_this_level: 0
+    name: Level one complete
+    message: Did you know a cat has four legs?
+  - score_for_this_level: 300
+    name: Level two complete
+    message: Did you know old greeks have grey hair?
 --- !u!1 &1616419726
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class gameDirector : MonoBehaviour {
     [Header("Game Parameters")]
     public int lives = 3;
-    public int level = 1;
+    public int level_num = 0;
     public int score = 0;
 
     public int correct_answer_added_score = 100;
@@ -19,7 +19,7 @@ public class gameDirector : MonoBehaviour {
     private levelParametersGame current_level;
     void Start () {
         ui_director.set_lives(lives);
-        ui_director.set_level(level);
+        ui_director.set_level(level_num);
         ui_director.set_score(score);
         current_level = level_director.check_current_level(score);
 	}
@@ -38,12 +38,6 @@ public class gameDirector : MonoBehaviour {
     {
         lives += dif;
         ui_director.set_lives(lives);
-    }
-
-    public void change_level(int dif = 1)
-    {
-        level += dif;
-        ui_director.set_level(level);
     }
 
     public void change_score(int dif = 100)
@@ -81,9 +75,16 @@ public class gameDirector : MonoBehaviour {
         levelParametersGame new_level = level_director.check_current_level(score);
         if(new_level != current_level)
         {
-            current_level = new_level;
-            Debug.Log("Level has changed");
+            change_level(new_level);
         }
 
+    }
+
+    public void change_level(levelParametersGame new_level)
+    {
+        current_level = new_level;
+        level_num = current_level.get_level();
+        enemy_director.change_level(level_num);
+        ui_director.set_level(level_num);
     }
 }

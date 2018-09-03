@@ -46,7 +46,7 @@ public class UIDirector : MonoBehaviour {
 
     public void set_level(int num)
     {
-        level = num;
+        level = num + 1;
         show_level();
     }
 }

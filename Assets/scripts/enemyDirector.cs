@@ -89,4 +89,13 @@ public class enemyDirector : MonoBehaviour {
     {	
         enemy_ahead.update_answer(answer);
     }
+
+    public void change_level(int _level)
+    {
+        current_level = _level;
+        for(int i = 0; i < transform.childCount; i++){
+			Transform Go = transform.GetChild(i);
+            Go.GetComponent<enemyObject>().self_destruct();
+        }
+    }
 }
