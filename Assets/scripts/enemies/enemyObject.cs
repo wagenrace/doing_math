@@ -11,7 +11,7 @@ public class enemyObject : MonoBehaviour {
     private float moveSpeed = 1f;
     private Vector3 direction_vector = new Vector3(-1f, 0f, 0f);
 
-    void Update(){
+    void FixedUpdate(){
 		transform.Translate(direction_vector * moveSpeed * Time.deltaTime);
     }
 

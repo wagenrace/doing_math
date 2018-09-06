@@ -11,10 +11,16 @@ public class UIDirector : MonoBehaviour {
     public Text level_text;
     public Text score_text;
 
+    public GameObject player_parameter_canvas;
+    public GameObject level_up_canvas;
+
+    private canvasLevelUpDirector canvas_level_up;
+
     void Start () {
         show_level();
         show_lives();
         show_score();
+        canvas_level_up = level_up_canvas.GetComponent<canvasLevelUpDirector>();
 	}
 
     private void show_lives()
@@ -48,5 +54,17 @@ public class UIDirector : MonoBehaviour {
     {
         level = num + 1;
         show_level();
+    }
+
+    public void show_level_up(string name, string message){
+        player_parameter_canvas.SetActive(false);
+        level_up_canvas.SetActive(true);
+        canvas_level_up.set_name(name);
+        canvas_level_up.set_message(message);
+    }
+
+    public void disable_all_menus(){
+        player_parameter_canvas.SetActive(true);
+        level_up_canvas.SetActive(false);
     }
 }

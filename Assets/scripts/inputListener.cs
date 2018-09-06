@@ -16,31 +16,37 @@ public class inputListener : MonoBehaviour {
 	void Update () {
         if (Input.anyKeyDown)
         {
-            if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
-            {
-                if (current_answer_s != "")
-                {
-                    parent_director.send_answer(current_answer_s);
-                    set_current_answer_zero();
+            if(Time.timeScale == 0f){
+                if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)){
+                    parent_director.activate_game();
                 }
-            }
-            else if (Input.GetKeyDown("backspace"))
-            {
-                if (current_answer_s.Length > 0)
+            }else{
+                if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
                 {
-                    current_answer_s = current_answer_s.Substring(0, current_answer_s.Length - 1);
-                    if (!float.TryParse(current_answer_s + Input.inputString, out current_answer_f))
+                    if (current_answer_s != "")
                     {
-                        current_answer_f = 0;
+                        parent_director.send_answer(current_answer_s);
+                        set_current_answer_zero();
                     }
                 }
-                parent_director.update_answer(current_answer_s);
+                else if (Input.GetKeyDown("backspace"))
+                {
+                    if (current_answer_s.Length > 0)
+                    {
+                        current_answer_s = current_answer_s.Substring(0, current_answer_s.Length - 1);
+                        if (!float.TryParse(current_answer_s + Input.inputString, out current_answer_f))
+                        {
+                            current_answer_f = 0;
+                        }
+                    }
+                    parent_director.update_answer(current_answer_s);
 
-            }
-            else if (float.TryParse(current_answer_s + Input.inputString, out current_answer_f))
-            {
-                current_answer_s = current_answer_s + Input.inputString;
-                parent_director.update_answer(current_answer_s);
+                }
+                else if (float.TryParse(current_answer_s + Input.inputString, out current_answer_f))
+                {
+                    current_answer_s = current_answer_s + Input.inputString;
+                    parent_director.update_answer(current_answer_s);
+                }
             }
         }
     }

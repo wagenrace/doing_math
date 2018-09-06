@@ -13,20 +13,19 @@ public class enemyDirector : MonoBehaviour {
     private int current_level;
 	private string correct_answer;
 	private enemyObject enemy_ahead;
-	private long t_last_enemy_created = 0;
+	private float t_last_enemy_created = 0f;
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		//The time the last enemy was created
-		long elapsedTicks = (long)System.DateTime.Now.Ticks - t_last_enemy_created;
-		System.TimeSpan elapsedSpan = new System.TimeSpan(elapsedTicks);
+		float time_dif = Time.time - t_last_enemy_created;
 		
 		//Check if new enemy needs to be made
-		if(transform.childCount < max_num_enemies_simultaneously && elapsedSpan.TotalSeconds > delta_t_enemy_creation){
+		if(transform.childCount < max_num_enemies_simultaneously && time_dif > delta_t_enemy_creation){
 			create_new_enemy();
 		}
 		if(transform.childCount == 0){
@@ -48,7 +47,7 @@ public class enemyDirector : MonoBehaviour {
         s.GetComponent<enemyObject>().initilize_question(this, arr[0].ToString(), arr[1].ToString());
 		
 		//Set time of last enemy created to current time
-		t_last_enemy_created = (long)System.DateTime.Now.Ticks;
+		t_last_enemy_created = Time.time;
 		detect_first_enemy();
 	}
 

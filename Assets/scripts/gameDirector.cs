@@ -82,9 +82,17 @@ public class gameDirector : MonoBehaviour {
 
     public void change_level(levelParametersGame new_level)
     {
+        Time.timeScale = 0f; 
         current_level = new_level;
         level_num = current_level.get_level();
         enemy_director.change_level(level_num);
         ui_director.set_level(level_num);
+        ui_director.show_level_up(current_level.name, current_level.message);
+        Debug.Log("new level researched");
+    }
+
+    public void activate_game(){
+        Time.timeScale = 1f; 
+        ui_director.disable_all_menus();
     }
 }
