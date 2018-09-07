@@ -52,6 +52,10 @@ public class enemyObject : MonoBehaviour {
         //throw new NotImplementedException("The requested feature is not implemented.");
     }
 
+    public void dead_zone_trigged(){
+        self_destruct();
+    }
+    
     public void self_destruct()
     {
         Destroy(this.gameObject);

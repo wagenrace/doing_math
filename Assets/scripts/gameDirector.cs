@@ -52,21 +52,18 @@ public class gameDirector : MonoBehaviour {
 
     public void correct_answer_sended()
     {
-        update_answer(string.Empty);
-        input_listener.set_current_answer_zero();
+        empty_input();
         change_score(correct_answer_added_score);
     }
 
     public void incorrect_answer_sended()
     {
-        update_answer(string.Empty);
-        input_listener.set_current_answer_zero();
+        empty_input();
         change_score(incorrect_answer_added_score);
     }
 
     public void dead_zone_hit(){
-        update_answer(string.Empty);
-        input_listener.set_current_answer_zero();
+        empty_input();
         change_lives(-1);
     }
 
@@ -77,7 +74,6 @@ public class gameDirector : MonoBehaviour {
         {
             change_level(new_level);
         }
-
     }
 
     public void change_level(levelParametersGame new_level)
@@ -94,5 +90,15 @@ public class gameDirector : MonoBehaviour {
     public void activate_game(){
         Time.timeScale = 1f; 
         ui_director.disable_all_menus();
+    }
+
+    public void dead_zone_trigged(){
+        change_lives(-1);
+        empty_input();
+    }
+
+    private void empty_input(){
+        update_answer(string.Empty);
+        input_listener.set_current_answer_zero();
     }
 }
