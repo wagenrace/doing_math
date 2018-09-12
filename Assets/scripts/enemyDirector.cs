@@ -69,6 +69,7 @@ public class enemyDirector : MonoBehaviour {
 
 	private void update_enemy_ahead(enemyObject i){
 		enemy_ahead = i;
+		the_director.change_enemy_ahead(enemy_ahead);
 	}
 
 	public void correct_answer_sended(){

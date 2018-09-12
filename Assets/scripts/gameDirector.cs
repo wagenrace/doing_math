@@ -15,8 +15,9 @@ public class gameDirector : MonoBehaviour {
     public enemyDirector enemy_director;
     public inputListener input_listener;
     public gameLevelDirector level_director;
-
+    public playerDirector player_director;
     private levelParametersGame current_level;
+    private enemyObject enemy_ahead;
     void Start () {
         ui_director.set_lives(lives);
         ui_director.set_level(level_num);
@@ -50,6 +51,10 @@ public class gameDirector : MonoBehaviour {
         check_current_level();
     }
 
+    public void change_enemy_ahead(enemyObject _i){
+        enemy_ahead = _i;
+        player_director.change_first_enemy(enemy_ahead);
+    }
     public void correct_answer_sended()
     {
         empty_input();
