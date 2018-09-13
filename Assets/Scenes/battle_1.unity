@@ -366,7 +366,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 202279321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.863534, y: 0.0028374195, z: 0.0037257872}
+  m_LocalPosition: {x: -7.98, y: 0.0028374195, z: 0.0037257872}
   m_LocalScale: {x: 2.174035, y: 10.0107155, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -721,7 +721,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
-  sounds: []
+  sounds:
+  - name: music
+    clip: {fileID: 8300000, guid: 31ef35b1aa34f4cca9b22eaa22f8c712, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: correct_answer
+    clip: {fileID: 8300000, guid: 57d10d482179d47eea592aac5265c102, type: 3}
+    volume: 0.523
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: incorrect_answer
+    clip: {fileID: 8300000, guid: 035127568be1647f6865d0edacfd95f0, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: level_up
+    clip: {fileID: 8300000, guid: 17dfa294d8a6e974993da309d80b4b25, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
 --- !u!4 &1272408765
 Transform:
   m_ObjectHideFlags: 0
@@ -935,6 +971,7 @@ MonoBehaviour:
   input_listener: {fileID: 1565932619}
   level_director: {fileID: 1565932622}
   player_director: {fileID: 1616419727}
+  audio_director: {fileID: 1272408764}
 --- !u!114 &1565932622
 MonoBehaviour:
   m_ObjectHideFlags: 0

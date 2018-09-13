@@ -16,6 +16,7 @@ public class gameDirector : MonoBehaviour {
     public inputListener input_listener;
     public gameLevelDirector level_director;
     public playerDirector player_director;
+	public AudioManager audio_director;
     private levelParametersGame current_level;
     private enemyObject enemy_ahead;
     void Start () {
@@ -57,19 +58,16 @@ public class gameDirector : MonoBehaviour {
     }
     public void correct_answer_sended()
     {
+        audio_director.Play("correct_answer");
         empty_input();
         change_score(correct_answer_added_score);
     }
 
     public void incorrect_answer_sended()
     {
+        audio_director.Play("incorrect_answer");
         empty_input();
         change_score(incorrect_answer_added_score);
-    }
-
-    public void dead_zone_hit(){
-        empty_input();
-        change_lives(-1);
     }
 
     void check_current_level()
@@ -83,6 +81,7 @@ public class gameDirector : MonoBehaviour {
 
     public void change_level(levelParametersGame new_level)
     {
+        audio_director.Play("level_up");
         Time.timeScale = 0f; 
         current_level = new_level;
         level_num = current_level.get_level();
@@ -98,6 +97,8 @@ public class gameDirector : MonoBehaviour {
     }
 
     public void dead_zone_trigged(){
+        audio_director.Play("incorrect_answer");
+        Debug.Log("dead_zone is triggered 2");
         change_lives(-1);
         empty_input();
     }
