@@ -90,9 +90,13 @@ public class enemyDirector : MonoBehaviour {
     public void change_level(int _level)
     {
         current_level = _level;
+		destroy_all_enemies();
+    }
+
+	public void destroy_all_enemies(){
         for(int i = 0; i < transform.childCount; i++){
 			Transform Go = transform.GetChild(i);
             Go.GetComponent<enemyObject>().self_destruct();
         }
-    }
+	}
 }

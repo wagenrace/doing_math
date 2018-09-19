@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class gameDirector : MonoBehaviour {
     [Header("Game Parameters")]
-    public int lives = 3;
-    public int level_num = 0;
-    public int score = 0;
+    public int start_lives = 3;
+    public int start_level_num = 0;
+    public int start_score = 0;
+
+    private int lives;
+    private int level_num;
+    private int score;
 
     public int correct_answer_added_score = 100;
     public int incorrect_answer_added_score = -500;
@@ -20,6 +24,9 @@ public class gameDirector : MonoBehaviour {
     private levelParametersGame current_level;
     private enemyObject enemy_ahead;
     void Start () {
+        lives = start_lives;
+        level_num = start_level_num;
+        score = start_score;
         ui_director.set_lives(lives);
         ui_director.set_level(level_num);
         ui_director.set_score(score);
@@ -38,20 +45,31 @@ public class gameDirector : MonoBehaviour {
 
     public void change_lives(int dif = -1)
     {
-        lives += dif;
+        set_lives(lives + dif);
+        if(lives <= 0){
+            die();
+        }
+    }
+
+    void set_lives(int _lives){
+        lives = _lives;
         ui_director.set_lives(lives);
     }
 
     public void change_score(int dif = 100)
     {
-        score += dif;
-        if(score < 0){
-            score = 0;
+        if(score + dif < 0){
+            set_score(0);
+        }else{
+            set_score(score + dif);
         }
+        
+    }
+    void set_score(int _score){
+        score = _score;
         ui_director.set_score(score);
         check_current_level();
     }
-
     public void change_enemy_ahead(enemyObject _i){
         enemy_ahead = _i;
         player_director.change_first_enemy(enemy_ahead);
@@ -70,10 +88,10 @@ public class gameDirector : MonoBehaviour {
         change_score(incorrect_answer_added_score);
     }
 
-    void check_current_level()
+    private void check_current_level()
     {
         levelParametersGame new_level = level_director.check_current_level(score);
-        if(new_level != current_level)
+        if(new_level.get_level() > current_level.get_level())
         {
             change_level(new_level);
         }
@@ -98,7 +116,6 @@ public class gameDirector : MonoBehaviour {
 
     public void dead_zone_trigged(){
         audio_director.Play("incorrect_answer");
-        Debug.Log("dead_zone is triggered 2");
         change_lives(-1);
         empty_input();
     }
@@ -106,5 +123,19 @@ public class gameDirector : MonoBehaviour {
     private void empty_input(){
         update_answer(string.Empty);
         input_listener.set_current_answer_zero();
+    }
+
+    private void die(){
+        Time.timeScale = 0f;
+        enemy_director.destroy_all_enemies();
+        ui_director.show_game_over(score);
+        
+    }
+
+    public void restart(){
+        Debug.Log("Restart!");
+        set_lives(start_lives);
+        change_level(level_director.check_current_level(start_score));
+        set_score(start_score);
     }
 }
