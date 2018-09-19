@@ -16,31 +16,33 @@ public class enemyLevelDirector : MonoBehaviour {
         //Addition
         if(randomNumber < the_level.addition_prop_weight)
         {
-        return initilize_question_addition(the_level.min_answer_add, 
-                                           the_level.max_answer_add, 
+        return initilize_question_addition(the_level.min_input_add, 
+                                           the_level.max_input_add, 
                                            the_level.num_decimals_add);
         }
         randomNumber -= the_level.addition_prop_weight;
         
         if(randomNumber < the_level.substraction_prop_weight)
         {
-        return initilize_question_substraction(the_level.min_answer_sub, 
-                                           the_level.max_answer_sub, 
-                                           the_level.num_decimals_sub);
+        return initilize_question_substraction(the_level.min_input_sub, 
+                                           the_level.max_input_sub, 
+                                           the_level.num_decimals_sub,
+                                           allow_negative_answers:the_level.allow_negative_answers
+                                           );
         }
         randomNumber -= the_level.substraction_prop_weight;
 
         Debug.LogWarning("The wheel spon an landed on: NOTHING!!! Addition backup protocal in progress");
-        return initilize_question_addition(the_level.min_answer_add, 
-                                           the_level.max_answer_add, 
+        return initilize_question_addition(the_level.max_input_add, 
+                                           the_level.max_input_add, 
                                            the_level.num_decimals_add);
     }
 
-    public ArrayList initilize_question_addition(float min_answer, float max_answer, int num_decimals=0)
+    public ArrayList initilize_question_addition(float min_input, float max_input, int num_decimals=0)
     {
-        float new_correct_answer = Mathf.Round(Random.Range(min_answer, max_answer));
-        float first_elem = Mathf.Round(Random.Range(1f, new_correct_answer));
-        float second_elem = new_correct_answer - first_elem;
+        float first_elem = Mathf.Round(Random.Range(min_input, max_input));
+        float second_elem = Mathf.Round(Random.Range(min_input, max_input));
+        float new_correct_answer = first_elem + second_elem;
 
         ArrayList arr = new ArrayList();
         arr.Add(first_elem.ToString() + "+" + second_elem.ToString() + "=");
@@ -49,11 +51,18 @@ public class enemyLevelDirector : MonoBehaviour {
         return arr;
     }
 
-    public ArrayList initilize_question_substraction(float min_answer, float max_answer, int num_decimals=0)
+    public ArrayList initilize_question_substraction(float min_input, float max_input, int num_decimals=0, bool allow_negative_answers=false)
     {
-        float new_correct_answer = Mathf.Round(Random.Range(min_answer, max_answer));
-        float first_elem = Mathf.Round(Random.Range(new_correct_answer, new_correct_answer * 2 - 1f));
-        float second_elem = first_elem - new_correct_answer;
+        
+        float first_elem = Mathf.Round(Random.Range(min_input, max_input));
+        float second_elem;
+        if(allow_negative_answers){
+            second_elem = Mathf.Round(Random.Range(min_input, max_input));
+        }else{
+            second_elem = Mathf.Round(Random.Range(min_input, first_elem));
+        }
+
+        float new_correct_answer = first_elem - second_elem;
 
         ArrayList arr = new ArrayList();
         arr.Add(first_elem.ToString() + "-" + second_elem.ToString() + "=");
