@@ -406,16 +406,7 @@ MonoBehaviour:
     min_input_sub: 0
     num_decimals_sub: 0
   - addition_prop_weight: 1
-    max_input_add: 5
-    min_input_add: 1
-    num_decimals_add: 0
-    allow_negative_answers: 0
-    substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
-    num_decimals_sub: 0
-  - addition_prop_weight: 1
-    max_input_add: 7
+    max_input_add: 4
     min_input_add: 1
     num_decimals_add: 0
     allow_negative_answers: 0
@@ -424,8 +415,17 @@ MonoBehaviour:
     min_input_sub: 0
     num_decimals_sub: 0
   - addition_prop_weight: 1
-    max_input_add: 7
-    min_input_add: 0
+    max_input_add: 6
+    min_input_add: 1
+    num_decimals_add: 0
+    allow_negative_answers: 0
+    substraction_prop_weight: 0
+    max_input_sub: 1
+    min_input_sub: 0
+    num_decimals_sub: 0
+  - addition_prop_weight: 1
+    max_input_add: 9
+    min_input_add: 1
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 0
@@ -433,12 +433,30 @@ MonoBehaviour:
     min_input_sub: 0
     num_decimals_sub: 0
   - addition_prop_weight: 0
+    max_input_add: 9
+    min_input_add: 1
+    num_decimals_add: 0
+    allow_negative_answers: 0
+    substraction_prop_weight: 1
+    max_input_sub: 3
+    min_input_sub: 1
+    num_decimals_sub: 0
+  - addition_prop_weight: 0
     max_input_add: 10
     min_input_add: 0
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
+    max_input_sub: 6
+    min_input_sub: 1
+    num_decimals_sub: 0
+  - addition_prop_weight: 0
+    max_input_add: 10
+    min_input_add: 0
+    num_decimals_add: 0
+    allow_negative_answers: 0
+    substraction_prop_weight: 1
+    max_input_sub: 4
     min_input_sub: 0
     num_decimals_sub: 0
   - addition_prop_weight: 0
@@ -447,133 +465,115 @@ MonoBehaviour:
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
+    max_input_sub: 6
     min_input_sub: 0
     num_decimals_sub: 0
-  - addition_prop_weight: 0
+  - addition_prop_weight: 1
     max_input_add: 10
     min_input_add: 0
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
+    max_input_sub: 6
     min_input_sub: 0
     num_decimals_sub: 0
-  - addition_prop_weight: 0
+  - addition_prop_weight: 1
     max_input_add: 10
     min_input_add: 0
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
+    max_input_sub: 9
     min_input_sub: 0
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
+  - addition_prop_weight: 1
+    max_input_add: 15
     min_input_add: 0
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
+    max_input_sub: 10
     min_input_sub: 0
     num_decimals_sub: 0
   - addition_prop_weight: 0
-    max_input_add: 10
+    max_input_add: 20
     min_input_add: 0
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
+    max_input_sub: 20
     min_input_sub: 0
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
+  - addition_prop_weight: 1
+    max_input_add: 30
+    min_input_add: 10
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
+    max_input_sub: 30
+    min_input_sub: 10
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
+  - addition_prop_weight: 1
+    max_input_add: 40
+    min_input_add: 10
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
+    max_input_sub: 40
+    min_input_sub: 10
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
+  - addition_prop_weight: 1
+    max_input_add: 40
+    min_input_add: 20
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
+    max_input_sub: 40
+    min_input_sub: 20
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
+  - addition_prop_weight: 1
+    max_input_add: 50
+    min_input_add: 20
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
+    max_input_sub: 40
+    min_input_sub: 20
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
+  - addition_prop_weight: 1
+    max_input_add: 60
+    min_input_add: 20
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
+    max_input_sub: 50
+    min_input_sub: 20
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
+  - addition_prop_weight: 1
+    max_input_add: 80
+    min_input_add: 50
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
+    max_input_sub: 80
+    min_input_sub: 50
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
+  - addition_prop_weight: 1
+    max_input_add: 90
+    min_input_add: 60
     num_decimals_add: 0
     allow_negative_answers: 0
     substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
+    max_input_sub: 90
+    min_input_sub: 50
     num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
+  - addition_prop_weight: 1
+    max_input_add: 100
     min_input_add: 0
     num_decimals_add: 0
-    allow_negative_answers: 0
+    allow_negative_answers: 1
     substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
-    num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
-    num_decimals_add: 0
-    allow_negative_answers: 0
-    substraction_prop_weight: 1
-    max_input_sub: 1
-    min_input_sub: 0
-    num_decimals_sub: 0
-  - addition_prop_weight: 0
-    max_input_add: 10
-    min_input_add: 0
-    num_decimals_add: 0
-    allow_negative_answers: 0
-    substraction_prop_weight: 1
-    max_input_sub: 1
+    max_input_sub: 100
     min_input_sub: 0
     num_decimals_sub: 0
 --- !u!1 &547016459
@@ -1434,8 +1434,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 97}
-  m_SizeDelta: {x: 638.6, y: 254.9}
+  m_AnchoredPosition: {x: -12.3, y: 119.7}
+  m_SizeDelta: {x: 1001.7, y: 209.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004349614
 MonoBehaviour:
@@ -1463,7 +1463,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 140
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1904,11 +1904,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - score_for_this_level: 0
-    name: Level one complete
-    message: Did you know a cat has four legs?
-  - score_for_this_level: 99
-    name: Level two complete
+    name: Level 0
+    message: Lets test you
+  - score_for_this_level: 500
+    name: Level 1
+    message: Oke, you surviced that. What about this?
+  - score_for_this_level: 1500
+    name: Level 2
+    message: Still not enough? Oke, let see you handle this
+  - score_for_this_level: 3000
+    name: Level 3
+    message: You want more?
+  - score_for_this_level: 4500
+    name: Level 4
+    message: Fine, here are the big guns!
+  - score_for_this_level: 7000
+    name: Level 5
+    message: Lets up it a notch
+  - score_for_this_level: 10000
+    name: Level 6
+    message: I'm out of ideas for texts
+  - score_for_this_level: 13000
+    name: Level 7
     message: Did you know old greeks have grey hair?
+  - score_for_this_level: 17000
+    name: Level 8
+    message: Maybe you will go away if I'm not looking...
+  - score_for_this_level: 22000
+    name: Level 9
+    message: I AM NOT LOOKING
+  - score_for_this_level: 27000
+    name: Level 10
+    message: Are you still there?
+  - score_for_this_level: 32000
+    name: Level 11
+    message: Maybe you are here because you like the game
+  - score_for_this_level: 38000
+    name: Level 12
+    message: Mostlikely I am talking to meself in the future testing this game
+  - score_for_this_level: 44000
+    name: Level 13
+    message: Did you know old greeks have grey hair?
+  - score_for_this_level: 50000
+    name: Level 14
+    message: I already said that, didn't I?
+  - score_for_this_level: 56000
+    name: Level 15
+    message: Who cares, nobody gets here.
+  - score_for_this_level: 63000
+    name: Level 16
+    message: You know what I planned for the last level?
+  - score_for_this_level: 70000
+    name: Level 17
+    message: I planned HELL for the last level
+  - score_for_this_level: 80000
+    name: Level 18
+    message: But how would want to go to hell?
+  - score_for_this_level: 100000
+    name: HELL
+    message: Welcome to HELL....
 --- !u!1 &1616419726
 GameObject:
   m_ObjectHideFlags: 0

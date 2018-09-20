@@ -24,7 +24,7 @@ public class gameLevelDirector : MonoBehaviour {
         levelParametersGame current_level = levels[0];
         foreach(levelParametersGame level in levels)
         {
-            if(score > level.score_for_this_level){
+            if(score >= level.score_for_this_level){
                 current_level = level;
             }
         }
