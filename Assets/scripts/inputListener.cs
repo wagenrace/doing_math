@@ -44,7 +44,7 @@ public class inputListener : MonoBehaviour {
                 }
                 else if (float.TryParse(current_answer_s + Input.inputString, out current_answer_f))
                 {
-                    current_answer_s = current_answer_s + Input.inputString;
+                    current_answer_s = current_answer_f.ToString();
                     parent_director.update_answer(current_answer_s);
                 }
             }
