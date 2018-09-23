@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/battle_1.unity
     guid: 941dfac7da4954266ae45df1aaebb2eb
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
+    guid: 91e1791d0a1902149a1498ca1007f0fd
   m_configObjects: {}

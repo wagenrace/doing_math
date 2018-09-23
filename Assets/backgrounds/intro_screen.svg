@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="661.60669"
-     inkscape:cy="625.97303"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="1956.7479"
+     inkscape:cy="709.0335"
      inkscape:document-units="px"
-     inkscape:current-layer="g4870-3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -98,10 +98,11 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Instructions">
+     inkscape:label="Instructions"
+     style="display:inline">
     <g
        id="g4674"
-       transform="matrix(0.57971536,0,0,0.57971536,82.374611,167.94754)">
+       transform="matrix(0.57971536,0,0,0.57971536,11.663933,167.94754)">
       <g
          transform="translate(20.735312,25.622604)"
          id="g905">
@@ -182,7 +183,7 @@
              style="font-size:266.66665649px;text-align:center;text-anchor:middle;fill:#6f6f6f;fill-opacity:1">9</flowPara></flowRoot>      </g>
     </g>
     <g
-       transform="matrix(0.57971536,0,0,0.57971536,82.374611,337.70994)"
+       transform="matrix(0.57971536,0,0,0.57971536,11.663933,337.70994)"
        id="g4674-6">
       <g
          transform="translate(20.735312,25.622604)"
@@ -265,7 +266,7 @@
     </g>
     <g
        id="g905-28"
-       transform="matrix(0.57971536,0,0,0.57971536,94.39519,522.32615)">
+       transform="matrix(0.57971536,0,0,0.57971536,23.684512,522.32615)">
       <rect
          style="fill:#d7d7d7;fill-opacity:1;stroke:#6f6f6f;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          ry="51.025993"
@@ -291,7 +292,7 @@
            id="flowPara898-2">1</flowPara></flowRoot>    </g>
     <g
        id="g905-2-9"
-       transform="matrix(0.57971536,0,0,0.57971536,273.80111,522.32615)">
+       transform="matrix(0.57971536,0,0,0.57971536,203.09043,522.32615)">
       <rect
          style="fill:#d7d7d7;fill-opacity:1;stroke:#6f6f6f;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          ry="51.025993"
@@ -317,7 +318,7 @@
            id="flowPara898-5-9">2</flowPara></flowRoot>    </g>
     <g
        id="g905-27-1"
-       transform="matrix(0.57971536,0,0,0.57971536,453.207,522.32615)">
+       transform="matrix(0.57971536,0,0,0.57971536,382.49632,522.32615)">
       <rect
          style="fill:#d7d7d7;fill-opacity:1;stroke:#6f6f6f;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          ry="51.025993"
@@ -346,7 +347,7 @@
        transform="matrix(0.65062969,0,0,0.65062969,268.94715,654.65641)">
       <g
          id="g4870"
-         transform="matrix(0.89100662,0,0,0.89100662,4.6585389,57.69549)">
+         transform="matrix(0.89100662,0,0,0.89100662,-104.02184,57.69549)">
         <rect
            id="rect82-1-4"
            width="293.80099"
@@ -375,7 +376,7 @@
          transform="translate(510.79777,-68.313371)">
         <g
            id="g6534"
-           transform="matrix(0.89100662,0,0,0.89100662,-128.45518,87.080246)">
+           transform="matrix(0.89100662,0,0,0.89100662,-53.931495,105.71117)">
           <g
              transform="translate(339.96307,-570.31505)"
              id="g4870-4">
