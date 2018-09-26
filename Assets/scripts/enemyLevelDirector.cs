@@ -54,17 +54,21 @@ public class enemyLevelDirector : MonoBehaviour {
     public ArrayList initilize_question_substraction(float min_input, float max_input, int num_decimals=0, bool allow_negative_answers=false)
     {
         
-        float first_elem = Mathf.Round(Random.Range(min_input, max_input));
+        float rand1 = Mathf.Round(Random.Range(min_input, max_input));
+        float rand2 = Mathf.Round(Random.Range(min_input, max_input));
+        float first_elem;
         float second_elem;
+        float new_correct_answer;
+        ArrayList arr = new ArrayList();
         if(allow_negative_answers){
-            second_elem = Mathf.Round(Random.Range(min_input, max_input));
+            first_elem = rand1;
+            second_elem = rand2;
         }else{
-            second_elem = Mathf.Round(Random.Range(min_input, first_elem));
+            first_elem = Mathf.Max(rand1, rand2);
+            second_elem = Mathf.Min(rand1, rand2);
         }
 
-        float new_correct_answer = first_elem - second_elem;
-
-        ArrayList arr = new ArrayList();
+        new_correct_answer = first_elem - second_elem;
         arr.Add(first_elem.ToString() + "-" + second_elem.ToString() + "=");
         arr.Add(new_correct_answer.ToString());
 
