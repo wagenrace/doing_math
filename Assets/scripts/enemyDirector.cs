@@ -87,7 +87,7 @@ public class enemyDirector : MonoBehaviour {
         enemy_ahead.update_answer(answer);
     }
 
-    public void change_level(int _level)
+    public void set_level(int _level)
     {
         current_level = _level;
 		destroy_all_enemies();

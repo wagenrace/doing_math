@@ -5,7 +5,6 @@ using UnityEngine;
 public class gameDirector : MonoBehaviour {
     [Header("Game Parameters")]
     public int start_lives = 3;
-    public int start_level_num = 0;
     public int start_score = 0;
 
     private int lives;
@@ -24,13 +23,9 @@ public class gameDirector : MonoBehaviour {
     private levelParametersGame current_level;
     private enemyObject enemy_ahead;
     void Start () {
-        lives = start_lives;
-        level_num = start_level_num;
-        score = start_score;
-        ui_director.set_lives(lives);
-        ui_director.set_level(level_num);
-        ui_director.set_score(score);
-        current_level = level_director.check_current_level(score);
+        current_level = level_director.check_current_level(0);
+        set_score(start_score);
+        set_lives(start_lives);
 	}
 
     public void send_answer(string answer)
@@ -103,15 +98,17 @@ public class gameDirector : MonoBehaviour {
         Time.timeScale = 0f; 
         current_level = new_level;
         level_num = current_level.get_level();
-        enemy_director.change_level(level_num);
+        enemy_director.set_level(level_num);
         ui_director.set_level(level_num);
         ui_director.show_level_up(current_level.name, current_level.message);
         Debug.Log("new level researched");
     }
 
     public void activate_game(){
-        Time.timeScale = 1f; 
-        ui_director.disable_all_menus();
+        if(lives > 0){
+            Time.timeScale = 1f; 
+            ui_director.disable_all_menus();
+        }
     }
 
     public void dead_zone_trigged(){
@@ -133,9 +130,7 @@ public class gameDirector : MonoBehaviour {
     }
 
     public void restart(){
-        Debug.Log("Restart!");
         set_lives(start_lives);
-        change_level(level_director.check_current_level(start_score));
         set_score(start_score);
     }
 }

@@ -1881,7 +1881,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start_lives: 3
-  start_level_num: 0
   start_score: 0
   correct_answer_added_score: 100
   incorrect_answer_added_score: -500
