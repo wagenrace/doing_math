@@ -1,0 +1,1074 @@
+fileFormatVersion: 2
+guid: 143b88f2c2c7979449d156283e86e9c6
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: wizard_side_magic_tomato_skeleton_0
+    21300002: wizard_side_magic_tomato_skeleton_1
+    21300004: wizard_side_magic_tomato_skeleton_2
+    21300006: wizard_side_magic_tomato_skeleton_3
+    21300008: wizard_side_magic_tomato_skeleton_4
+    21300010: wizard_side_magic_tomato_skeleton_5
+    21300012: wizard_side_magic_tomato_skeleton_6
+    21300014: wizard_side_magic_tomato_skeleton_7
+    21300016: wizard_side_magic_tomato_skeleton_8
+    21300018: wizard_side_magic_tomato_skeleton_9
+    21300020: wizard_side_magic_tomato_skeleton_10
+    21300022: wizard_side_magic_tomato_skeleton_11
+    21300024: wizard_side_magic_tomato_skeleton_12
+    21300026: wizard_side_magic_tomato_skeleton_13
+    21300028: wizard_side_magic_tomato_skeleton_14
+    21300030: wizard_side_magic_tomato_skeleton_15
+    21300032: wizard_side_magic_tomato_skeleton_16
+    21300034: wizard_side_magic_tomato_skeleton_17
+    21300036: wizard_side_magic_tomato_skeleton_18
+    21300038: wizard_side_magic_tomato_skeleton_19
+    21300040: wizard_side_magic_tomato_skeleton_20
+    21300042: wizard_side_magic_tomato_skeleton_21
+    21300044: wizard_side_magic_tomato_skeleton_22
+    21300046: wizard_side_magic_tomato_skeleton_23
+    21300048: wizard_side_magic_tomato_skeleton_24
+    21300050: wizard_side_magic_tomato_skeleton_25
+    21300052: wizard_side_magic_tomato_skeleton_26
+    21300054: wizard_side_magic_tomato_skeleton_27
+    21300056: wizard_side_magic_tomato_skeleton_28
+    21300058: wizard_side_magic_tomato_skeleton_29
+    21300060: wizard_side_magic_tomato_skeleton_30
+    21300062: wizard_side_magic_tomato_skeleton_31
+    21300064: wizard_side_magic_tomato_skeleton_32
+    21300066: wizard_side_magic_tomato_skeleton_33
+    21300068: wizard_side_magic_tomato_skeleton_34
+    21300070: wizard_side_magic_tomato_skeleton_35
+    21300072: wizard_side_magic_tomato_skeleton_36
+    21300074: wizard_side_magic_tomato_skeleton_37
+    21300076: wizard_side_magic_tomato_skeleton_38
+    21300078: wizard_side_magic_tomato_skeleton_39
+    21300080: wizard_side_magic_tomato_skeleton_40
+    21300082: wizard_side_magic_tomato_skeleton_41
+    21300084: wizard_side_magic_tomato_skeleton_42
+    21300086: wizard_side_magic_tomato_skeleton_43
+    21300088: wizard_side_magic_tomato_skeleton_44
+    21300090: wizard_side_magic_tomato_skeleton_45
+    21300092: wizard_side_magic_tomato_skeleton_46
+    21300094: wizard_side_magic_tomato_skeleton_47
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 3271
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2ae8e0f48ceb642b59d5a10223a45e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_1
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 3269
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8abdaf9a530b064d92aa4acedec235f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3211
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6455f3bd0e832d448a8572261246dec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_4
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 2596
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88bc0af0a3d18945b9ef21e0a63e356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_5
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 2610
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1519e3a78ed2e94cb2705d6d05f1f37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_6
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 2590
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece81ebb5aa9274498caba829b332012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_7
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 2578
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c13aaa555fae040bdda3a87ef261d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_8
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 2555
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fded523880e36545b0b2c172f77cee2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_9
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 2558
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0cd8d0a954db948ad40937afbd763e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_10
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 2533
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1409e64ac366c4d97e19698721d854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_11
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 2550
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ab9e6e4a55e334f929f47bcbd9482e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_12
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 2547
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e8873aaf61fa546848547a275a4af2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_13
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 2533
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ec378796e67a04c9dbe34909830738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_14
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 2523
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fc4dcb65f5e5a4892a86eada636eea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_15
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2518
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75963b3a3bd9144db58947fa1b65978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_16
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 2515
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b24b32c750bbee4483bf147f80cca60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_17
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 2495
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d29080f28a49bf4cb2938173404f044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_18
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 2500
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c146a817dc33bb44d93c4695f71a117a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_19
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 2497
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2201985be6e60734eb089f52597004cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_20
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 2487
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a248ccc7040cf4448efe2f75f90597e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_21
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 2476
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e1f806c642e1448b44d44470b2d0f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_22
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 2460
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0da8c024712f74b87534d45880d40a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_23
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 2463
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42355e914dcc324cae75a77a436458c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_25
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 2441
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf0a971a00ce2943b23bd5f61a258c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_27
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 2399
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1755ddb05ac5e449c76541e6eeeaea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_28
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 2379
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b837e2901e9a9e647a10f0b772110efa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_29
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1650
+        width: 294
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5187602, y: 0.30403668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd85519a1780dd4bb9f83d43b615c83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_30
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1560
+        width: 213
+        height: 254
+      alignment: 9
+      pivot: {x: 0.40382007, y: 0.06570507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5821b024468af234daafd0c758c089a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_31
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 1495
+        width: 111
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efbff8de27b317409891d733d52eab9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_32
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1416
+        width: 92
+        height: 161
+      alignment: 9
+      pivot: {x: 0.48287067, y: 0.9110964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d142f6fd98c3b43a10366159cf43ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_33
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1213
+        width: 223
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156f95e4328f67646b3f2a0f3045988e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_34
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1362
+        width: 93
+        height: 167
+      alignment: 9
+      pivot: {x: 0.49152726, y: 0.9104815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35489904eafc24540a510198d20c50d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_35
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1254
+        width: 104
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5681865, y: 0.9225163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db02b6878d68b3d4b9b7d070de02b35b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_36
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1208
+        width: 105
+        height: 139
+      alignment: 9
+      pivot: {x: 0.54502475, y: 0.9138078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f9875f4bae460479a3a2189da5e231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_37
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 963
+        width: 148
+        height: 419
+      alignment: 9
+      pivot: {x: 0.93878174, y: 0.037104715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6355850b04454646afb970e45f229c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_38
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1125
+        width: 67
+        height: 110
+      alignment: 9
+      pivot: {x: 0.48823935, y: 0.8939675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a6619649fdeb9499e046e831562672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_39
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1047
+        width: 92
+        height: 163
+      alignment: 9
+      pivot: {x: 0.49143517, y: 0.88188237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c74df933318814bbed6d1411da2cb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_40
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1087
+        width: 71
+        height: 112
+      alignment: 9
+      pivot: {x: 0.47780383, y: 0.8869324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf11c83abc1e976409c0f4ba6563e5e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_41
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 940
+        width: 81
+        height: 148
+      alignment: 9
+      pivot: {x: 0.47862074, y: 0.9036791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cab6b2f5225324197eae46929cc3ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_42
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 927
+        width: 81
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8908412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284b7fe299bcce54dbf63afd7c466b7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_43
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 825
+        width: 145
+        height: 84
+      alignment: 9
+      pivot: {x: 0.27905568, y: 0.84016126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85977830fb6e23d42bd3f3606e80042e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_44
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 806
+        width: 143
+        height: 87
+      alignment: 9
+      pivot: {x: 0.2880757, y: 0.8781935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb888e18b7b5dd4aacfc13a447b2b04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_45
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 58
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13b1d7746d8adc4d9728b0194c6f464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_46
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2929a5402aaf3d74a9eb21cb80238666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_47
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1051
+        width: 88
+        height: 161
+      alignment: 9
+      pivot: {x: 0.51790756, y: 0.9110964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44be5f714fbb97745a51bf04d24b598f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_side_magic_tomato_skeleton_3
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 2724
+        width: 71
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3b974ee0b6189448c88780fdaba7d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a1e431d7e9e028c46880766a61677464
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
