@@ -84,7 +84,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4659829847400706}
   - component: {fileID: 95582755463145578}
-  - component: {fileID: 50687376284812148}
   m_Layer: 0
   m_Name: Kyap_the_wizard
   m_TagString: Untagged
@@ -521,26 +520,6 @@ Transform:
   m_Father: {fileID: 4799956327282934}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.288001}
---- !u!50 &50687376284812148
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228468187797446}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!95 &95582755463145578
 Animator:
   serializedVersion: 3
@@ -553,7 +532,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: ff88a2c8a0ac19645be060697dfe800e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
