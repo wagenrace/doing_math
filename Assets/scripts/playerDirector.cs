@@ -14,4 +14,8 @@ public class playerDirector : MonoBehaviour {
 		first_enemy = _first_enemy;
 		player_sprite.change_target_pos(first_enemy.transform.position);
 	}
+
+	public void cast_spell(){
+		player_sprite.cast_spell();
+	}
 }

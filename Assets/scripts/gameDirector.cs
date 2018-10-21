@@ -31,6 +31,7 @@ public class gameDirector : MonoBehaviour {
     public void send_answer(string answer)
     {
         enemy_director.send_answer(answer);
+        player_director.cast_spell();
     }
 
     public void update_answer(string answer)
