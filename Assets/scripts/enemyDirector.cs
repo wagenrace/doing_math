@@ -12,9 +12,13 @@ public class enemyDirector : MonoBehaviour {
 	private string correct_answer;
 	private enemyObject enemy_ahead;
 	private float t_last_enemy_created = 0f;
+	private float y_last_enemy;
+	private float y_dif_enemy = 0.24f;
+	private float y_max_enemy = 0.7f;
+	private float y_min_enemy = 0.1f;
 	// Use this for initialization
 	void Start () {
-		
+		y_last_enemy = y_min_enemy;
 	}
 	
 	// Update is called once per frame
@@ -38,8 +42,9 @@ public class enemyDirector : MonoBehaviour {
         
 		GameObject s = Instantiate(enemy_object) as GameObject;
 		s.transform.SetParent(this.transform);
-		s.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.8f,Random.Range(0.2f, 0.8f),1f));
-        
+		float new_y_enemy = (y_last_enemy + y_dif_enemy - y_min_enemy) % (y_max_enemy - y_min_enemy) + y_min_enemy;
+		s.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.8f,new_y_enemy,1f));
+        y_last_enemy = new_y_enemy;
         ArrayList arr = level_director.create_enemy(current_level);
         s.GetComponent<enemyObject>().initilize_question(this, arr[0].ToString(), arr[1].ToString());
 		
