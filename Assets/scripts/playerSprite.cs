@@ -4,19 +4,22 @@ using UnityEngine;
 
 
 public class playerSprite : MonoBehaviour {
-    Animator anim;
+    Animator animator;
     public float player_sprite_speed = 1f;
     string spell_trigger = "do_spell";
+    string idle_anim_name = "kyap_idle";
     private Vector3 target_pos;
     void Start(){
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
 	void Update () {
 		float step = player_sprite_speed * Time.deltaTime;
 
         // Move our position a step closer to the target.
-        this.transform.position = Vector3.MoveTowards(this.transform.position, target_pos, step);
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName(idle_anim_name)){
+            this.transform.position = Vector3.MoveTowards(this.transform.position, target_pos, step);
+        }
 	}
 
     public void change_target_pos(Vector3 _target_pos){
@@ -26,6 +29,6 @@ public class playerSprite : MonoBehaviour {
     }
 
     public void cast_spell(){
-        anim.SetTrigger(spell_trigger);
+        animator.SetTrigger(spell_trigger);
     }
 }
