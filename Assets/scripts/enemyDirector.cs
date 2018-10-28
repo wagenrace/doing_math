@@ -16,6 +16,7 @@ public class enemyDirector : MonoBehaviour {
 	private float y_dif_enemy = 0.24f;
 	private float y_max_enemy = 0.7f;
 	private float y_min_enemy = 0.1f;
+	private int numb_enemies = 0;
 	// Use this for initialization
 	void Start () {
 		y_last_enemy = y_min_enemy;
@@ -30,7 +31,7 @@ public class enemyDirector : MonoBehaviour {
 		if(transform.childCount < max_num_enemies_simultaneously && time_dif > delta_t_enemy_creation){
 			create_new_enemy();
 		}
-		if(transform.childCount == 0){
+		if(numb_enemies == 0){
 			create_new_enemy();
 		}
 
@@ -55,15 +56,21 @@ public class enemyDirector : MonoBehaviour {
 
 	void detect_first_enemy(){
 		float? min_x = null;
+		numb_enemies = 0;
 		for(int i = 0; i < transform.childCount; i++){
 			Transform Go = transform.GetChild(i);
+			enemyObject _current_enemie = Go.GetComponent<enemyObject>();
+			if(!_current_enemie.is_alive){
+				continue;
+			}
+			numb_enemies++;
 			if(min_x == null){
 				min_x = Go.transform.position.x;
-				update_enemy_ahead(Go.GetComponent<enemyObject>());
+				update_enemy_ahead(_current_enemie);
 			}else{
 				if(min_x > Go.transform.position.x){
 					min_x = Go.transform.position.x;
-					update_enemy_ahead(Go.GetComponent<enemyObject>());
+					update_enemy_ahead(_current_enemie);
 				}
 			}
 		}

@@ -5,6 +5,7 @@ using System;
 
 
 public class enemyObject : MonoBehaviour {
+    public bool is_alive = true;
     private enemyDirector the_director;
     private string correct_answer;
     private string question;
@@ -39,7 +40,8 @@ public class enemyObject : MonoBehaviour {
     public void send_answer(string answer){
 		if(answer == correct_answer){
             the_director.correct_answer_sended();
-			self_destruct();
+            is_alive = false;
+			Invoke("self_destruct", 5);
 		}else{
 			the_director.incorrect_answer_sended();
 		}
@@ -55,7 +57,6 @@ public class enemyObject : MonoBehaviour {
     public void dead_zone_trigged(){
         self_destruct();
     }
-    
     public void self_destruct()
     {
         Destroy(this.gameObject);
