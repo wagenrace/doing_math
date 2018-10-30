@@ -39,9 +39,7 @@ public class enemyObject : MonoBehaviour {
 
     public void send_answer(string answer){
 		if(answer == correct_answer){
-            the_director.correct_answer_sended();
             is_alive = false;
-			Invoke("self_destruct", 5);
 		}else{
 			the_director.incorrect_answer_sended();
 		}
@@ -55,6 +53,11 @@ public class enemyObject : MonoBehaviour {
     }
 
     public void dead_zone_trigged(){
+        self_destruct();
+    }
+
+    public void spell_trigged(){
+        the_director.correct_answer_sended();
         self_destruct();
     }
     public void self_destruct()
