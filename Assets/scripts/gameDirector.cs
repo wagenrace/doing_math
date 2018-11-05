@@ -32,6 +32,7 @@ public class gameDirector : MonoBehaviour {
     {
         player_director.cast_spell();
         enemy_director.send_answer(answer);
+        empty_input();
     }
 
     public void update_answer(string answer)
@@ -73,14 +74,12 @@ public class gameDirector : MonoBehaviour {
     public void correct_answer_sended()
     {
         audio_director.Play("correct_answer");
-        empty_input();
         change_score(correct_answer_added_score);
     }
 
     public void incorrect_answer_sended()
     {
         audio_director.Play("incorrect_answer");
-        empty_input();
         change_score(incorrect_answer_added_score);
     }
 

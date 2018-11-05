@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerDirector : MonoBehaviour {
 	public gameDirector the_director;
 	public GameObject spell_object; 
+	public float x_offset_spell = 0.5f;
 	private enemyObject first_enemy;
 	private playerSprite player_sprite;
 	// Use this for initialization
@@ -21,6 +22,7 @@ public class playerDirector : MonoBehaviour {
 		GameObject s = Instantiate(spell_object) as GameObject;
 		Vector3 target = first_enemy.transform.position;
 		Vector3 origin = player_sprite.transform.position;
+		origin[0] += x_offset_spell;
 		s.GetComponent<spell_movement>().setup(origin, target);
 	}
 }
